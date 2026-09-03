@@ -1,0 +1,442 @@
+ /* =========================================
+   FORMATAÇÃO DO LAYOUT
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    margin: 0 auto;
+}
+
+h1 {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+p,
+a,
+span,
+li,
+ul,
+strong,
+option,
+textarea,
+form {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+:root {
+    --rosa: #f17ea1;
+    --dourado: #FFD700;
+    --preto: #000000;
+    --branco: #ffffff;
+    --rosaclaro: #f8cfcb;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+ul li {
+    list-style: none;
+}
+
+
+/* LINKS DO MENU DESKTOP */
+
+ul li a {
+    display: inline-block;
+
+    text-decoration: none;
+
+    margin-left: 5px;
+
+    color: var(--preto);
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+ul li a:hover {
+    color: var(--rosa);
+
+    transform: translateY(-4px) scale(1.05);
+}
+
+
+/* HEADER */
+
+#inicio {
+    background-color: var(--rosaclaro);
+
+    position: relative;
+
+    z-index: 1000;
+}
+
+
+#inicio .container {
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin: auto 20px;
+
+    min-height: 80px;
+}
+
+
+#inicio img {
+    width: 90px;
+
+    height: auto;
+}
+
+
+/* =========================================
+   MENU MOBILE
+   ESCONDIDO NO COMPUTADOR
+========================================= */
+
+.menu-esmalte,
+.menu-mobile {
+    display: none;
+}
+
+
+/* =========================================
+   TABLET E CELULAR
+========================================= */
+
+@media (max-width: 768px) {
+
+
+    /* -----------------------------------------
+       ESCONDE MENU DESKTOP
+    ----------------------------------------- */
+
+    .menu-desktop {
+        display: none;
+    }
+
+
+    /* -----------------------------------------
+       BOTÃO DO ESMALTE
+    ----------------------------------------- */
+
+    .menu-esmalte {
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        justify-content: flex-start;
+
+        position: relative;
+
+        width: 55px;
+
+        height: 65px;
+
+        padding: 0;
+
+        border: none;
+
+        background: transparent;
+
+        cursor: pointer;
+
+        z-index: 1002;
+
+        transition: transform 0.3s ease;
+    }
+
+
+    /* -----------------------------------------
+       TAMPA DO ESMALTE
+    ----------------------------------------- */
+
+    .esmalte-tampa {
+
+        display: block;
+
+        width: 27px;
+
+        height: 17px;
+
+        background: var(--preto);
+
+        border-radius: 5px 5px 2px 2px;
+
+        position: relative;
+
+        z-index: 2;
+
+        transition:
+            transform 0.4s ease,
+            background 0.3s ease;
+    }
+
+
+    /* -----------------------------------------
+       CORPO DO ESMALTE
+    ----------------------------------------- */
+
+    .esmalte-corpo {
+
+        width: 43px;
+
+        height: 40px;
+
+        background: var(--rosa);
+
+        border-radius: 5px 5px 12px 12px;
+
+        margin-top: -2px;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        gap: 4px;
+
+        position: relative;
+
+        box-shadow:
+            0 4px 10px rgba(0, 0, 0, 0.15);
+
+        transition:
+            transform 0.4s ease,
+            background 0.3s ease;
+    }
+
+
+    /* -----------------------------------------
+       BRILHOS DO ESMALTE
+    ----------------------------------------- */
+
+    .esmalte-corpo span {
+
+        width: 3px;
+
+        height: 15px;
+
+        background: rgba(255, 255, 255, 0.55);
+
+        border-radius: 10px;
+
+        transition: 0.3s ease;
+    }
+
+
+    /* -----------------------------------------
+       HOVER DO ESMALTE
+    ----------------------------------------- */
+
+    .menu-esmalte:hover {
+
+        transform: scale(1.08);
+    }
+
+
+    .menu-esmalte:hover .esmalte-corpo {
+
+        background: #ed6f95;
+    }
+
+
+    /* -----------------------------------------
+       ESMALTE ABERTO
+    ----------------------------------------- */
+
+    .menu-esmalte.ativo .esmalte-tampa {
+
+        transform:
+            translateY(-12px)
+            rotate(-8deg);
+    }
+
+
+    .menu-esmalte.ativo .esmalte-corpo {
+
+        transform: translateY(2px);
+    }
+
+
+    /* =========================================
+       MENU QUE ABRE
+    ========================================= */
+
+    .menu-mobile {
+
+        display: block;
+
+        position: absolute;
+
+        top: 80px;
+
+        right: 20px;
+
+        width: min(260px, calc(100% - 40px));
+
+        background: var(--branco);
+
+        padding: 12px;
+
+        border-radius:
+            0 0 20px 20px;
+
+        box-shadow:
+            0 10px 30px rgba(0, 0, 0, 0.12);
+
+        opacity: 0;
+
+        visibility: hidden;
+
+        transform:
+            translateY(-15px)
+            scale(0.95);
+
+        transform-origin: top right;
+
+        transition:
+            opacity 0.3s ease,
+            transform 0.3s ease,
+            visibility 0.3s ease;
+
+        z-index: 1001;
+    }
+
+
+    /* MENU ABERTO */
+
+    .menu-mobile.ativo {
+
+        opacity: 1;
+
+        visibility: visible;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+
+
+    /* =========================================
+       LINKS MOBILE
+    ========================================= */
+
+    .menu-mobile ul {
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 4px;
+    }
+
+
+    .menu-mobile ul li {
+
+        width: 100%;
+    }
+
+
+    .menu-mobile ul li a {
+
+        display: block;
+
+        width: 100%;
+
+        margin: 0;
+
+        padding: 12px 10px;
+
+        color: var(--preto);
+
+        border-radius: 10px;
+
+        transition:
+            color 0.3s ease,
+            background 0.3s ease,
+            transform 0.3s ease;
+    }
+
+
+    .menu-mobile ul li a:hover {
+
+        color: var(--rosa);
+
+        background: var(--rosaclaro);
+
+        transform: translateX(5px);
+    }
+
+
+    /* =========================================
+       HEADER MOBILE
+    ========================================= */
+
+    #inicio .container {
+
+        margin: 0 20px;
+
+        min-height: 80px;
+    }
+
+}
+
+
+/* =========================================
+   CELULARES PEQUENOS
+========================================= */
+
+@media (max-width: 480px) {
+
+    #inicio .container {
+
+        margin: 0 15px;
+    }
+
+
+    #inicio img {
+
+        width: 80px;
+    }
+
+
+    .menu-mobile {
+
+        right: 15px;
+
+        width: calc(100% - 30px);
+    }
+
+}
