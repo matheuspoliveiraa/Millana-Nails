@@ -12,51 +12,37 @@
 
     <link rel="shortcut icon" href="img/iconemillana.ico" type="image/x-icon">
 
-    <!-- FONTES -->
-
-    <!-- Título -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
         rel="stylesheet">
 
-    <!-- Subtítulo e texto -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
 
-    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
     <header id="inicio">
-
         <div class="container">
-
-            <!-- LOGO -->
-            <a href="index.html">
+            <a href="#inicio">
                 <img src="IMG/logomillana.png" alt="Logo Nails Millana">
             </a>
 
-
-            <!-- MENU DESKTOP -->
             <nav class="menu-desktop">
-
                 <ul>
                     <li>
-                        <a href="">Início</a>
+                        <a href="#inicio">Início</a>
                         <span>|</span>
 
-                        <a href="">Sobre a Nail</a>
+                        <a href="#sobre">Sobre a Nail</a>
                         <span>|</span>
 
-                        <a href="">Cuidados e Procedimentos</a>
+                        <a href="#certificacoes">Certificações</a>
                         <span>|</span>
 
                         <a href="">Portifólio</a>
@@ -65,43 +51,31 @@
                         <a href="">Contato</a>
                     </li>
                 </ul>
-
             </nav>
 
-
-            <!-- BOTÃO ESMALTE -->
             <button class="menu-esmalte" id="menuEsmalte" aria-label="Abrir menu">
-
                 <span class="esmalte-tampa"></span>
 
                 <span class="esmalte-corpo">
-
                     <span></span>
                     <span></span>
                     <span></span>
-
                 </span>
-
             </button>
-
         </div>
 
-
-        <!-- MENU MOBILE -->
         <nav class="menu-mobile" id="menuMobile">
-
             <ul>
-
                 <li>
-                    <a href="">Início</a>
+                    <a href="#inicio">Início</a>
                 </li>
 
                 <li>
-                    <a href="">Sobre a Nail</a>
+                    <a href="#sobre">Sobre a Nail</a>
                 </li>
 
                 <li>
-                    <a href="">Cuidados e Procedimentos</a>
+                    <a href="#certificacoes">Certificações</a>
                 </li>
 
                 <li>
@@ -111,97 +85,157 @@
                 <li>
                     <a href="">Contato</a>
                 </li>
-
             </ul>
-
         </nav>
-
     </header>
 
-    <!-- =========================================
-     CARROSSEL INICIAL
-========================================= -->
+    <section class="hero-carrossel">
+        <div class="carrossel">
+            <div class="slide ativo">
+                <img src="IMG/Carrossel4.jpeg" alt="Unhas decoradas Millana Nails">
+            </div>
 
-<section class="hero-carrossel">
+            <div class="slide">
+                <img src="IMG/Carrossel2.jpeg" alt="Alongamento de unhas Millana Nails">
+            </div>
 
-    <div class="carrossel">
+            <div class="slide">
+                <img src="IMG/Carrossel5.jpeg" alt="Nail art Millana Nails">
+            </div>
 
-        <!-- FOTOS -->
+            <div class="slide">
+                <img src="IMG/Carrossel1.png" alt="Manicure Millana Nails">
+            </div>
 
-        <div class="slide ativo">
-            <img src="IMG/Carrossel4.jpeg" alt="Unhas decoradas Millana Nails">
+            <div class="slide">
+                <img src="IMG/Carrossel3.jpeg" alt="Manicure Millana Nails">
+            </div>
+
+            <button class="carrossel-btn anterior" id="anterior">
+                &#10094;
+            </button>
+
+            <button class="carrossel-btn proximo" id="proximo">
+                &#10095;
+            </button>
+
+            <div class="indicadores">
+                <span class="indicador ativo"></span>
+                <span class="indicador"></span>
+                <span class="indicador"></span>
+                <span class="indicador"></span>
+                <span class="indicador"></span>
+            </div>
         </div>
 
-        <div class="slide">
-            <img src="IMG/Carrossel2.jpeg" alt="Alongamento de unhas Millana Nails">
+        <div class="hero-texto">
+            <span>NAIL DESIGNER</span>
+
+            <h1>
+                Suas unhas,<br>
+                sua identidade.
+            </h1>
+
+            <p>
+                Beleza, cuidado e detalhes feitos especialmente para você.
+            </p>
+
+            <a href="#agendamento" class="botao-agendar">
+                Agende seu horário
+            </a>
+        </div>
+    </section>
+
+    <section class="sobre-nails" id="sobre">
+
+        <div class="sobre-container">
+
+            <div class="sobre-texto">
+                <span class="sobre-subtitulo">SOBRE A NAIL</span>
+
+                <h2>
+                    Um universo dedicado à perfeição das unhas
+                </h2>
+
+                <p>
+                    Prazer, eu sou Jaddy Millana.
+                    Há 7 anos, encontrei no mundo das unhas muito mais do que uma profissão: encontrei uma forma de
+                    transformar beleza, cuidado e autoestima em momentos especiais.
+                </p>
+
+                <p>
+                    Ao longo dessa trajetória, venho aperfeiçoando meu trabalho e colocando carinho em cada detalhe,
+                    porque acredito que cada cliente merece se sentir única e especial.
+                </p>
+
+                <p>
+                    Para mim, cada unha conta uma história — e é um prazer fazer parte da sua!
+                </p>
+
+                <span class="sobre-assinatura">Millana Nails</span>
+            </div>
+
+            <div class="sobre-foto">
+                <div class="foto-circulo">
+                    <img src="IMG/jaddysobremim.png" alt="Profissional de manicure">
+                </div>
+            </div>
+
         </div>
 
-        <div class="slide">
-            <img src="IMG/Carrossel5.jpeg" alt="Nail art Millana Nails">
+    </section>
+
+    <section class="certificacoes" id="certificacoes">
+
+        <div class="certificacoes-container">
+
+            <div class="certificacoes-titulo">
+                <span>CERTIFICAÇÕES</span>
+
+                <h2>
+                    Conhecimento que<br>
+                    transforma em excelência.
+                </h2>
+
+                <p>
+                    Cada certificado representa uma etapa da minha trajetória
+                    e do meu compromisso em oferecer um trabalho cada vez
+                    mais profissional e cuidadoso.
+                </p>
+            </div>
+
+            <div class="certificados-grid">
+
+                <div class="certificado">
+                    <img src="IMG/certificado1.png" alt="Certificado 1">
+                </div>
+
+                <div class="certificado">
+                    <img src="IMG/certificado2.png" alt="Certificado 2">
+                </div>
+
+                <div class="certificado">
+                    <img src="IMG/certificado3.png" alt="Certificado 3">
+                </div>
+
+                <div class="certificado">
+                    <img src="IMG/certificado4.png" alt="Certificado 4">
+                </div>
+
+            </div>
+
+            <div class="certificado-modal" id="certificadoModal">
+                <button class="fechar-certificado" id="fecharCertificado">&times;</button>
+
+                <div class="certificado-modal-conteudo">
+                    <img id="certificadoAmpliado" src="" alt="Certificado ampliado">
+                </div>
+            </div>
+
         </div>
 
-        <div class="slide">
-            <img src="IMG/Carrossel1.jpeg" alt="Manicure Millana Nails">
-        </div>
+    </section>
 
-        <div class="slide">
-            <img src="IMG/Carrossel3.jpeg" alt="Manicure Millana Nails">
-        </div>
-
-        <!-- BOTÃO ANTERIOR -->
-
-        <button class="carrossel-btn anterior" id="anterior">
-            &#10094;
-        </button>
-
-
-        <!-- BOTÃO PRÓXIMO -->
-
-        <button class="carrossel-btn proximo" id="proximo">
-            &#10095;
-        </button>
-
-
-        <!-- INDICADORES -->
-
-        <div class="indicadores">
-
-            <span class="indicador ativo"></span>
-            <span class="indicador"></span>
-            <span class="indicador"></span>
-            <span class="indicador"></span>
-            <span class="indicador"></span>
-
-        </div>
-
-    </div>
-
-
-    <!-- TEXTO SOBRE O CARROSSEL -->
-
-    <div class="hero-texto">
-
-        <span>NAIL DESIGNER</span>
-
-        <h1>
-            Suas unhas,<br>
-            sua identidade.
-        </h1>
-
-        <p>
-            Beleza, cuidado e detalhes feitos especialmente para você.
-        </p>
-
-        <a href="#agendamento" class="botao-agendar">
-            Agende seu horário
-        </a>
-
-    </div>
-
-</section>
-
-
-    <!-- JAVASCRIPT -->
     <script src="script.js"></script>
 
 </body>
